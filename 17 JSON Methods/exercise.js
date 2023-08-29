@@ -1,17 +1,16 @@
-const person1 = {
+const person = {
   id: 1,
   firstName: 'Mario',
   lastName: 'Rossi',
   age: 25,
-  address: {
-    state: 'Italy',
-    city: 'Rome',
-    street: 'Via Romano, 12'
-  }
 };
 
-const person2 = JSON.parse(JSON.stringify(person1));
-person2.address.city = 'Milan';
+const filteredPerson = {
+  id: person.id,
+  age: person.age,
+};
 
-console.log(person1);
-console.log(person2);
+//Object to JSON
+const json = JSON.stringify(filteredPerson);
+
+console.log(json); // Output: {"id":1,"age":25}
